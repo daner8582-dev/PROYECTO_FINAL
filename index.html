@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Crisis Económica</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>SIMULADOR DE CRISIS ECONÓMICA FAMILIAR</h1>
+
+        <p>
+            Página interactiva para analizar problemas de abastecimiento,
+            precios y transporte.
+        </p>
+
+        <!-- IMAGEN PRINCIPAL -->
+        <img src="img/banner.jpg" alt="Imagen principal">
+    </header>
+
+    <nav>
+        <a href="#carburante">Carburantes</a>
+        <a href="#alimentos">Alimentos</a>
+        <a href="#transporte">Transporte</a>
+        <a href="#casos">Casos</a>
+        <a href="#conclusiones">Conclusiones</a>
+    </nav>
+
+    <main>
+
+        <!-- ESCENARIO 1 -->
+        <section id="carburante" class="card">
+
+            <h2>Simulador de Abastecimiento de Carburantes</h2>
+
+            <!-- IMAGEN -->
+            <img src="img/gasolina.jpg" alt="Gasolina">
+
+            <input type="number" id="reserva" placeholder="Reserva inicial">
+
+            <input type="number" id="consumo" placeholder="Consumo diario">
+
+            <input type="number" id="reabastecimiento" placeholder="Reabastecimiento diario">
+
+            <input type="number" id="critico" placeholder="Nivel crítico">
+
+            <button onclick="calcularCarburante()">
+                Calcular
+            </button>
+
+            <div id="resultadoCarburante"></div>
+
+        </section>
+
+        <!-- ESCENARIO 2 -->
+        <section id="alimentos" class="card">
+
+            <h2>Simulador de Precios de Alimentos</h2>
+
+            <!-- IMAGEN -->
+            <img src="img/mercado.jpg" alt="Mercado">
+
+            <input type="text" id="producto" placeholder="Producto">
+
+            <input type="number" id="precioAnterior" placeholder="Precio anterior">
+
+            <input type="number" id="precioActual" placeholder="Precio actual">
+
+            <input type="number" id="cantidad" placeholder="Cantidad mensual">
+
+            <button onclick="calcularAlimentos()">
+                Calcular gasto
+            </button>
+
+            <div id="resultadoAlimentos"></div>
+
+        </section>
+
+        <!-- ESCENARIO 3 -->
+        <section id="transporte" class="card">
+
+            <h2>Simulador de Transporte</h2>
+
+            <!-- IMAGEN -->
+            <img src="img/transporte.jpg" alt="Transporte">
+
+            <input type="number" id="distanciaNormal" placeholder="Distancia normal">
+
+            <input type="number" id="distanciaDesvio" placeholder="Distancia con desvío">
+
+            <input type="number" id="costoKm" placeholder="Costo por km">
+
+            <input type="number" id="viajes" placeholder="Viajes por semana">
+
+            <button onclick="calcularTransporte()">
+                Calcular transporte
+            </button>
+
+            <div id="resultadoTransporte"></div>
+
+        </section>
+
+        <!-- CASOS -->
+        <section id="casos" class="card">
+
+            <h2>Casos de estudio</h2>
+
+            <section id="casos" class="card">
+
+    <h2>Casos de estudio</h2>
+
+    <p>
+        En esta sección se presentan algunos ejemplos de prueba
+        para verificar el funcionamiento de los simuladores.
+    </p>
+
+    <!-- CASO 1 -->
+    <div class="caso">
+
+        <h3>Caso 1: Carburantes</h3>
+
+        <p>
+            Este caso representa una estación de servicio que tiene
+            una cantidad limitada de combustible y debe calcular
+            cuántos días podrá abastecer a la población.
+        </p>
+
+        <p><strong>Reserva inicial:</strong> 10000 litros</p>
+
+        <p><strong>Consumo diario:</strong> 1200 litros</p>
+
+        <p><strong>Reabastecimiento:</strong> 300 litros</p>
+
+        <p><strong>Resultado esperado:</strong>
+        La reserva llegará al nivel crítico aproximadamente
+        en 8 días.</p>
+
+    </div>
+
+    <!-- CASO 2 -->
+    <div class="caso">
+
+        <h3>Caso 2: Precios de alimentos</h3>
+
+        <p>
+            Este caso muestra cómo el aumento de precios
+            afecta el gasto mensual de una familia en productos
+            básicos de la canasta familiar.
+        </p>
+
+        <p><strong>Arroz:</strong> 8 Bs → 11 Bs</p>
+
+        <p><strong>Papa:</strong> 7 Bs → 10 Bs</p>
+
+        <p><strong>Aceite:</strong> 12 Bs → 18 Bs</p>
+
+        <p><strong>Resultado esperado:</strong>
+        El gasto mensual aumenta debido al incremento
+        de precios.</p>
+
+    </div>
+
+    <!-- CASO 3 -->
+    <div class="caso">
+
+        <h3>Caso 3: Transporte</h3>
+
+        <p>
+            Este caso simula el aumento del costo de transporte
+            cuando existen bloqueos o desvíos en las rutas.
+        </p>
+
+        <p><strong>Distancia normal:</strong> 10 km</p>
+
+        <p><strong>Distancia con desvío:</strong> 16 km</p>
+
+        <p><strong>Costo por km:</strong> 2 Bs</p>
+
+        <p><strong>Resultado esperado:</strong>
+        El gasto semanal de transporte aumenta debido
+        a la ruta más larga.</p>
+
+    </div>
+
+</section>
+
+        </section>
+
+        <!-- CONCLUSIONES -->
+        <section id="conclusiones" class="card">
+
+            <h2>Conclusiones</h2>
+
+            <p>
+                Este proyecto permitió aplicar HTML, CSS y JavaScript
+                para resolver problemas relacionados con la economía familiar.
+            </p>
+
+            <p>
+                También se utilizó DOM para mostrar resultados dinámicos
+                en pantalla.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Desarrollado por: TU NOMBRE</p>
+        <p>Programación Web I - 2026</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
